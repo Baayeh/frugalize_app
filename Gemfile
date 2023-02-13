@@ -68,6 +68,11 @@ end
 
 group :test do
   gem 'shoulda-matchers', '~> 5.0'
+  gem 'capybara'
+  gem 'selenium-webdriver', '~> 4.4'
+  gem 'webdrivers', '~> 5.0', require: false
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+gem 'rails-controller-testing'

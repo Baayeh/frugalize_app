@@ -30,7 +30,7 @@ p {
   padding: 0;
 }
 
-div.alert {
+div.alert-warning {
   margin-top: 4rem;
   position: absolute;
   width: 100%;

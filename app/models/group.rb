@@ -10,7 +10,7 @@ class Group < ApplicationRecord
   def total_amount_of_transactions
     sum = 0
     group_expenses.each do |item|
-      sum += item.deal.amount
+      sum += item.expense.amount
     end
     sum
   end

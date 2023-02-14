@@ -4,8 +4,8 @@
     <%= link_to "Back to Categories", user_groups_path(current_user) %>
     <p>Total Amount: ₵<%= @group.total_amount_of_transactions %></p>
   </div>
-  <% @group.recent_transactions.each do |transaction| %>
-    <%= render transaction %>
+  <% @group.recent_transactions.each do |group_expense| %>
+    <%= render group_expense %>
   <% end %>
   <% if @group.group_expenses.empty? %>
     <div class="alert alert-danger" role="alert">

@@ -1,5 +1,7 @@
 class ExpensesController < ApplicationController
-  def index; end
+  def index
+    @group = Group.includes(:group_expenses).find(params[:group_id])
+  end
 
   def new
     @expense = Expense.new

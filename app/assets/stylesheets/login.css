@@ -1,0 +1,65 @@
+section.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.fade-in-fwd {
+  -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in-fwd
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+div.login-logo {
+  margin-top: 3rem;
+}
+
+div.login-logo img {
+  width: 50%;
+}
+
+section#login-form {
+  margin-top: 4rem;
+}
+
+section#login-form .form-control {
+  background-color: #80808047;
+  color: #434b54;
+  font-size: 1.3rem;
+}
+
+section#login-form .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+}

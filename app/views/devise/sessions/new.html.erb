@@ -1,26 +1,30 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<section class="login-container fade-in-fwd">
+  <div class="login-logo text-center">
+    <%= image_tag "frugalize-logo.png" %>
   </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+  <section id="login-form">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-floating mb-3">
+        <%= f.text_field :email, autofocus: true, autocomplete: "email", class: "form-control", id: "email", placeholder: "name@example.com" %>
+        <%= f.label :email %>
+      </div>
+      <div class="form-floating mb-3">
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control", id: "password", placeholder: "Password" %>
+        <%= f.label :password %>
+      </div>
+      <div class="mb-3 text-center">
+        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+        <% end %>
+      </div>
+      <div class="actions mb-3">
+        <%= f.submit "Log in", class: "btn btn-primary d-block w-100 text-uppercase fs-5" %>
+      </div>
+    <% end %>
+  </section>
+  <div class="text-center">
+    <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+      <%= link_to "Sign up", new_registration_path(resource_name), class: "text-black fs-5" %><br />
+    <% end %>
   </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>

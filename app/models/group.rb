@@ -6,4 +6,16 @@ class Group < ApplicationRecord
   validates :name, presence: true, length: { minimum: 5 }
   validates :icon, presence: true
   validates :author, presence: true
+
+  def total_amount_of_transactions
+    sum = 0
+    group_expenses.each do |item|
+      sum += item.deal.amount
+    end
+    sum
+  end
+
+  def recent_transactions
+    group_expenses.order(created_at: :desc)
+  end
 end

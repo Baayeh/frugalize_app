@@ -1,29 +1,37 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<section class="login-container fade-in-fwd">
+  <div class="login-logo text-center">
+    <%= image_tag "frugalize-logo.png" %>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+  <section id="login-form">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="form-floating mb-3">
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", id: "name", placeholder: "John Doe" %>
+        <%= f.label :name %>
+      </div>
+      <div class="form-floating mb-3">
+        <%= f.text_field :email, autofocus: true, autocomplete: "email", class: "form-control", id: "email", placeholder: "name@example.com" %>
+        <%= f.label :email %>
+      </div>
+      <div class="form-floating mb-3">
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-control", id: "password", placeholder: "Password" %>
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+      </div>
+      <div class="form-floating mb-3">
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", id: "password_confirmation", placeholder: "Password Confirmation" %>
+        <%= f.label :password_confirmation %>
+      </div>
+      <div class="actions mb-3">
+        <%= f.submit "Sign Up", class: "btn btn-primary d-block w-100 text-uppercase fs-5" %>
+      </div>
+    <% end %>
+  </section>
+  <div class="text-center">
+    <%- if controller_name != 'sessions' %>
+      <%= link_to "Log in", new_session_path(resource_name), class: "text-black fs-5" %><br />
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>

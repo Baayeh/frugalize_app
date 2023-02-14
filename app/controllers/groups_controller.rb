@@ -1,7 +1,8 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
+
   def index
-    @groups = Group.all
+    @groups = current_user.groups
   end
 
   def new
@@ -11,12 +12,12 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.new(group_params)
 
-    if @group.save
-      respond_to do |format|
+    respond_to do |format|
+      if @group.save
         format.html { redirect_to user_groups_url(current_user), notice: 'Category was successfully created.' }
+      else
+        format.html { render :new, status: :unprocessable_entity }
       end
-    else
-      format.html { render :new, status: :unprocessable_entity }
     end
   end
 

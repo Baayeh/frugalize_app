@@ -1,0 +1,18 @@
+databases:
+  - name: frugalize_app
+    databaseName: frugalize_app
+    user: frugalize_app
+
+services:
+  - type: web
+    name: frugalize_app
+    env: ruby
+    buildCommand: './bin/render-build.sh'
+    startCommand: 'bundle exec puma -C config/puma.rb'
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: frugalize_app
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false

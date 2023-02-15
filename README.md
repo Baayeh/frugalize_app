@@ -14,6 +14,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+  - [📹 Video Presentation](#video-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -90,6 +91,12 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [FRUGALIZE](Coming soon)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📹 Video Presentation <a name="video-demo"></a>
+
+- [Video Presentation](https://drive.google.com/file/d/1Tzpr6ZxRqAl_LRapBOCTP-5fFJQLInBN/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

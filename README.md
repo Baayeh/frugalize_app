@@ -30,9 +30,22 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [FRUGALIZE] <a name="about-project"></a>
+# FRUGALIZE APP <a name="about-project"></a>
 
-**The Frugalize app** helps you to manage your budget. The app allows users to create categories and add transactions to the categories
+**The Frugalize app** helps you to manage your budget. The app allows users to create categories and add transactions to the categories.
+
+## Screenshots
+
+<div>
+  <img src="./screenshots/splash_screen.png" alt="logo" width="300"  height="auto" />
+  <img src="./screenshots/login.png" alt="logo" width="300"  height="auto" />
+  <img src="./screenshots/signUp.png" alt="logo" width="300"  height="auto" />
+  <img src="./screenshots/homepage.png" alt="logo" width="300"  height="auto" />
+  <img src="./screenshots/sidebar.png" alt="logo" width="300"  height="auto" />
+  <img src="./screenshots/cat_transactions.png" alt="logo" width="300"  height="auto" />
+  <img src="./screenshots/add_cat.png" alt="logo" width="300"  height="auto" />
+  <img src="./screenshots/add_transaction.png" alt="logo" width="300"  height="auto" />
+</div>
 
 ## 🛠 Built With <a name="built-with"></a>
 

@@ -5,8 +5,8 @@ RSpec.describe ExpensesController, type: :request do
     default_url_options[:host] = 'localhost:3000'
     @user = User.create(name: 'John Smith', email: 'john.smith1@gmail.com', password: 'password',
                         password_confirmation: 'password')
-    
-    @group = @user.groups.create(name: "Fast Food", icon: "food-icon.jpg")
+
+    @group = @user.groups.create(name: 'Fast Food', icon: 'food-icon.jpg')
     sign_in @user
   end
   describe 'GET /expenses' do

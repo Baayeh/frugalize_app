@@ -7,7 +7,7 @@ RSpec.describe ExpensesController, type: :routing do
     end
 
     it 'routes to #new' do
-      expect(get: '/users/1/groups/1/expenses/new').to route_to('expenses#new', user_id: '1',  group_id: '1')
+      expect(get: '/users/1/groups/1/expenses/new').to route_to('expenses#new', user_id: '1', group_id: '1')
     end
 
     it 'routes to #create' do

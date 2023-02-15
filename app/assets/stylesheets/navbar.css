@@ -1,0 +1,39 @@
+nav {
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+div.offcanvas {
+  background: rgb(55, 120, 194);
+  background:
+    linear-gradient(
+      0deg,
+      rgba(55, 120, 194, 1) 0%,
+      rgba(10, 34, 61, 1) 100%
+    );
+}
+
+div.user_avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #434b54;
+}
+
+div.user_avatar p {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}

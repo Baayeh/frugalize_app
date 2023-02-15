@@ -1,0 +1,16 @@
+<div id="<%= dom_id group %>" class="mb-3">
+  <div class="card">
+    <div class="card-body d-flex align-items-center gap-4">
+      <div class="img-icon">
+        <%= image_tag group.icon, size: "100x100", class: "img-fluid" %>
+      </div>
+      <div>
+        <h4 class="card-title mb-0"><%= group.name %></h4>
+        <p class="card-text">Total Amount: ₵<%= group.total_amount_of_transactions %></p>
+        <p>
+          <%= link_to "View Transactions", user_group_expenses_path(current_user, group), class: "btn btn-secondary" %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

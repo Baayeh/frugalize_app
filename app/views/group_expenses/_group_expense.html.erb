@@ -1,0 +1,12 @@
+<div id="<%= dom_id group_expense %>" class="card mb-3">
+  <div class="card-body d-flex justify-content-between align-items-center">
+    <div>
+      <h5 class="card-title"><%= group_expense.expense.name %></h5>
+      <p><%= group_expense.created_at.strftime("%d %b, %I:%M %p") %></p>
+    </div>
+    <div>
+      <p class="mb-0">₵<%= group_expense.expense.amount %></p>
+      <p><%= group_expense.group.name %></p>
+    </div>
+  </div>
+</div>

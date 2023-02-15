@@ -1,0 +1,23 @@
+<%= form_with model: expense, url: user_group_expenses_path(current_user, group) do |form| %>
+  <% if expense.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(expense.errors.count, "error") %> prohibited this deal from being saved:</h2>
+      <ul>
+        <% expense.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="mb-3 fs-4">
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Eg: Hamburger, Yam Chops, etc.." %>
+  </div>
+  <div class="mb-3 fs-4">
+    <%= form.label :amount, style: "display: block" %>
+    <%= form.text_field :amount, class: "form-control", placeholder: "How much does it cost" %>
+  </div>
+  <div>
+    <%= form.submit "Add Transaction", class: "btn btn-primary" %>
+  </div>
+<% end %>

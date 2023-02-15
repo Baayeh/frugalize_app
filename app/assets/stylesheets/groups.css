@@ -1,0 +1,13 @@
+div.add-cat {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+div.add-cat a {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}

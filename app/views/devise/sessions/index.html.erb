@@ -1,0 +1,10 @@
+<section id="splash" class="vh-100">
+  <div class="main-circle bounce-in-top text-center">
+    <%= image_tag "frugalize-logo.png" %>
+  </div>
+  <p class="fst-italic text-center tracking-in-contract ">Pay your way</p>
+  <div class="splash-actions d-flex justify-content-center gap-2 mt-5">
+    <%= link_to "Login", new_user_session_path, class: "btn btn-secondary text-uppercase fade-in " %>
+    <%= link_to "Register", new_user_registration_path, class: "btn btn-outline-info text-uppercase fade-in " %>
+  </div>
+</section>
